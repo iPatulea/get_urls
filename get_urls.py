@@ -148,6 +148,7 @@ def main(argv):
     if not os.path.exists(input_file) or not os.path.exists(directory):
         print_help()
         logging.error("Input file or download directory don't exist")
+        sys.exit(1)
 
     with open(input_file, "r") as f:
         urls = f.read().splitlines()
